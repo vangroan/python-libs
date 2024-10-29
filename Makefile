@@ -10,4 +10,7 @@ endif
 
 init: check-venv
 	pip install -qU pip setuptools
-	pip install -e libraries/logctx
+	pip install -e 'libraries/logctx[dev]'
+
+test:
+	pytest
