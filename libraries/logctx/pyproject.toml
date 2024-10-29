@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logctx"
+description = "Provides a context manager that adds scoped values to `logging` log records."
+readme = "README.md"
+license = { file = "LICENCE" }
+dynamic = ["version"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">= 3.7"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "mypy",
+    "black",
+    "isort",
+
+    "pytest",
+    "pytest-cov",
+    "pytest-mock",
+]
+
+[tool.setuptools.dynamic]
+version = { file = ["version"] }
+
+[tool.black]
+line-length = 120
+
